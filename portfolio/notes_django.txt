@@ -1,0 +1,24 @@
+If you wann create the project so just type django-admin startproject projectname
+if you wann see django command so type django-admin
+so if you run the server you will see the page which create by urls.py
+##urls.py:- uniform resource locator , here all resourcess like video , pdf, image , HTML pages , your the user and reuest to show page so server will response and it will display the page which returning the url , it's done by http protocoal hypertext transfer 
+if you wann create the app so use django-admin startapp app_name
+now we create the app so we need to setting up into installed app  
+
+## View :- View are the python function which handle the http request and return http respose 
+after creating the views function of response we need to create the urls file and import the views in that to run 
+then we need to incluse our app urls into the django urls 
+
+# HTML :- if you difinded the html then goto the views and render it render(request,'nameoffile') and then also told in setting 'DIRS': [BASE_DIR / 'templates'],
+for CSS we are creating file : -Static folder after creating this we have to write the location in setting STATICFILES_DIRS=[os.path.join(BASE_DIR, 'nameoffile')]
+  how to link our css with html so <link rel="stylesheet" href="{%static "css/style.css"}"> file name and then path our css path 
+
+     <h1> Hi My Name Shaktisinh</h1>
+    <img src="{%static 'images/mypic.png'%}" alt="this is picture"> <!-- if image doesn't load we are write the this is picture -->
+    
+Models:- Models is python classe by which we are going to create the table and databse, our database is store in the sqlite you can see the database setting in the setting DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+} we need to define the charfield and in Models and then into admin page we need to inherit this Models and after that makemigrations :- python manage.py makemigrations after that migrate it 
